@@ -16,21 +16,21 @@ const Skills = () => {
       <div className='flex flex-col lg:flex-row w-full gap-8 lg:gap-20'>
         <div className='w-full lg:w-1/2'>
           <div className='mt-6 lg:mt-10 w-full flex flex-col gap-6'>
-            <SkillBar skill="Wordpress" percentage="100" />
-            <SkillBar skill="Figma" percentage="90" />
-            <SkillBar skill="Vs code" percentage="100" />
-            <SkillBar skill="Android Studio" percentage="70" />
-            <SkillBar skill="Flutter" percentage="60" />
+            <SkillBar skill="React" percentage="85" />
+            <SkillBar skill="Tailwind CSS" percentage="90" />
+            <SkillBar skill="Express" percentage="70" />
+            <SkillBar skill="MongoDb" percentage="70" />
+            <SkillBar skill="MySql" percentage="75" />
           </div>
         </div>
 
         <div className='w-full lg:w-1/2'>
           <div className='mt-6 lg:mt-10 w-full flex flex-col gap-6'>
-            <SkillBar skill="Python" percentage="100" />
-            <SkillBar skill="C" percentage="90" />
-            <SkillBar skill="React" percentage="100" />
-            <SkillBar skill="CSS" percentage="70" />
-            <SkillBar skill="Dart" percentage="60" />
+            <SkillBar skill="Javascript" percentage="75" />
+            <SkillBar skill="C" percentage="70" />
+            <SkillBar skill="HTML" percentage="90" />
+            <SkillBar skill="Python" percentage="70" />
+            <SkillBar skill="Dart" percentage="50" />
           </div>
         </div>
       </div>
