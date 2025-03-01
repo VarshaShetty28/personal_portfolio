@@ -36,8 +36,8 @@ const Projects = () => {
         title="PORTFOLIO"
         des="My Portfolio is a React-based personal website built with Framer Motion, Express.js, and Nodemailer, offering a dynamic and visually engaging experience with smooth animations and an integrated mail service for seamless communication. 🚀💼"
         src={p2}
-        githubLink="https://github.com/yourusername/social-media-clone"
-        liveLink="https://tunetrek-theta.vercel.app/"
+        githubLink="https://github.com/VarshaShetty28/personal_portfolio"
+        liveLink="https://personal-portfolio-pi-lac.vercel.app/"
       />
         <ProjectsCard
         title="TravelBliss"
