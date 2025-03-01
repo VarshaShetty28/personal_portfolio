@@ -37,33 +37,33 @@ const Features = () => {
         variants={fadeUp(0.2)}
         initial="hidden"
         whileInView="show"
-          title="MERN Stack"
-          des="Building responsive and interactive web applications using React and Tailwind CSS.& Learning backend technologies with Node.js, Express, and exploring Python for backend services. "
+          title="Web Development"
+          des="Building modern, responsive, and interactive web applications using the MERN Stack (MongoDB, Express.js, React, Node.js) with a focus on performance and user experience. 🚀"
           icon={<FaBars/>}
         />
          <Card 
-          title="App Developement "
-          des="Flutter Development Worked on Flutter for cross-platform mobile app development. "
+          title="UI/UX Design "
+          des="Crafting intuitive and visually appealing user interfaces by applying design principles, accessibility standards, and user research to enhance user experience and engagement. 🎨"
           icon={<SiProgress/>}
         />
          <Card 
-          title="UI/UX Design"
-          des="Designing user-friendly interfaces using Figma to create wireframes and prototypes. "
+          title="Figma"
+          des="Designing seamless wireframes, interactive prototypes, and high-fidelity UI elements using Figma, ensuring efficient collaboration, design consistency, and user-centered product development. ✨ "
           icon={<FaMobile/>}
         />
          <Card 
-          title="Database Management"
-          des="Understanding and working with databases, SQL queries, and database design concepts. 🚀 "
+          title="Database Management Systems (DBMS) "
+          des=" Understanding and working with relational and non-relational databases, writing optimized SQL queries, ensuring data integrity, and designing scalable database architectures. 🗄️"
           icon={<SiAntdesign/>}
         />
          <Card 
-          title="Problem-Solving & Debugging"
-          des="Identifying and resolving bugs in web and mobile applications to improve performance and efficiency. 🚀 "
+          title="Python Programming "
+          des="Exploring backend development, automation, and data processing using Python, leveraging its extensive libraries and frameworks for web applications, scripting, and machine learning.  "
           icon={<FaGlobe/>}
         />
          <Card 
-          title="Data Structures & Algorithms (DSA)"
-          des="Practicing problem-solving with DSA concepts to improve coding efficiency and logic building."
+          title="Flutter App Development"
+          des="Developing cross-platform mobile applications using Flutter and Dart, focusing on smooth UI/UX, optimized performance, and seamless integration of backend services. 📱"
           icon={<AiFillAppstore/>}
         />
      </div>

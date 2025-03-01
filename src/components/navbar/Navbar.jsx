@@ -102,9 +102,7 @@ const Navbar = () => {
                     <h1 className='mt-12 text-2xl text-gray-400 font-titleFont font-semibold'>Varsha Shetty</h1>
                   </div>
                   <p className="text-sm text-gray-400 mt-10 tracking-wide">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Earum soluta perspiciatis molestias enim cum repellat, magnam
-                    exercitationem distinctio aliquid nam.
+                  🚀 Full Stack Web Developer | Passionate about building intuitive and scalable web applications.  
                   </p>
                 </div>
                 <ul className="flex flex-col gap-4">
@@ -133,22 +131,6 @@ const Navbar = () => {
                   </h2>
                   <div className="flex gap-4">
                   <a 
-                    href="https://www.instagram.com/yourusername" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="banner-icon"
-                  >
-                    <FaInstagram />
-                  </a>
-                      <a 
-                        href="https://twitter.com/yourusername" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="banner-icon"
-                      >
-                        <FaTwitter />
-                      </a>
-                      <a 
                         href="https://www.linkedin.com/in/yourusername" 
                         target="_blank" 
                         rel="noopener noreferrer" 
@@ -156,6 +138,24 @@ const Navbar = () => {
                       >
                         <FaLinkedinIn />
                       </a>
+                  
+                      <a 
+                        href="https://x.com/Varsha1478?t=u5Lcsis8vXR_IEqc3dcaiQ&s=09" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="banner-icon"
+                      >
+                        <FaTwitter />
+                      </a>
+                      <a 
+                        href="https://www.instagram.com/yourusername" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="banner-icon"
+                      >
+                        <FaInstagram />
+                      </a>
+                      
                   </div>
                 </div>
                 <span

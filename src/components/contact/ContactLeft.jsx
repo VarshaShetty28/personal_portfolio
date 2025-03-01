@@ -26,24 +26,7 @@ const ContactLeft = () => {
         <div className='flex flex-col gap-4'>
             <h2 className='text-base uppercase font-titleFont mb-4'>Find me in</h2>
             <div className='flex gap-4'>
-                    <a 
-                         href="https://www.instagram.com/yourusername" 
-                         target="_blank" 
-                         rel="noopener noreferrer" 
-                         className="banner-icon"
-                         >
-                         <FaInstagram />
-                     </a>
- 
-                     <a 
-                         href="https://twitter.com/yourusername" 
-                         target="_blank" 
-                         rel="noopener noreferrer" 
-                         className="banner-icon"
-                         >
-                         <FaTwitter />
-                     </a>
- 
+                   
                      <a 
                          href="https://www.linkedin.com/in/yourusername" 
                          target="_blank" 
@@ -51,7 +34,25 @@ const ContactLeft = () => {
                          className="banner-icon"
                          >
                          <FaLinkedinIn />
-                     </a>           
+                     </a> 
+                     <a 
+                         href="https://x.com/Varsha1478?t=u5Lcsis8vXR_IEqc3dcaiQ&s=09" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="banner-icon"
+                         >
+                         <FaTwitter />
+                     </a>
+ 
+                     
+                     <a 
+                         href="https://www.instagram.com/yourusername" 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="banner-icon"
+                         >
+                         <FaInstagram />
+                     </a>         
             </div>
         </div>
     </div>

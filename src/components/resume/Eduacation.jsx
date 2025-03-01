@@ -17,6 +17,7 @@ const Education = () => {
           <ResumeCard 
             title='BE-Computer Science & Engineering'
             subTitle="Managalore Institute of technology and engineering(2022-present)"
+            ap="CGPA"
             result="9.38/10"
             des="An institute where I honed my technical skills and deepened my understanding of computer science and engineering."
           />

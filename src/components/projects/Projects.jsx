@@ -8,6 +8,7 @@ import CS3 from "../../assets/images/CS3.jpeg"
 import { motion } from "framer-motion";
 import p1 from "../../assets/images/p1.png"
 import p2 from "../../assets/images/p2.png"
+import p3 from "../../assets/images/p3.png"
 
 const Projects = () => {
   return (
@@ -26,23 +27,25 @@ const Projects = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xs:gap-10 md:gap-8 lg:gap-14 px-3 xs:px-4 md:px-8 lg:px-0'>
       <ProjectsCard
         title="TUNETREK"
-        des="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+        des="TuneTrek is a React-based web application built with Framer Motion, MouseFollower, and Tailwind CSS, providing a seamless and interactive experience for exploring, filtering, and comparing headphones based on brand, features, and budget. 🚀🎧"
         src={p1}
         githubLink="https://github.com/VarshaShetty28/tunetrek"
         liveLink="https://tunetrek-theta.vercel.app/"
       />
       <ProjectsCard
-        title="Personal Portfolio"
-        des="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
+        title="PORTFOLIO"
+        des="My Portfolio is a React-based personal website built with Framer Motion, Express.js, and Nodemailer, offering a dynamic and visually engaging experience with smooth animations and an integrated mail service for seamless communication. 🚀💼"
         src={p2}
         githubLink="https://github.com/yourusername/social-media-clone"
         liveLink="https://tunetrek-theta.vercel.app/"
       />
         <ProjectsCard
-          title="SOCIAL MEDIA CLONE"
-          des="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectOne}
-        />
+        title="TravelBliss"
+        des="TravelBliss is a Figma-designed travel website that evokes peace and relaxation. It features an elegant UI, smooth navigation, and a stress-free booking experience. From exploring destinations to planning getaways, every detail is designed for ease. ✨🌍"
+        src={p3}
+        githubLink="https://www.figma.com/design/bK3DXfYqrATbirIOYONLPc/TravelBliss_Pro1?t=itJQnIITOlFQr7ge-1"
+        liveLink="https://www.figma.com/proto/bK3DXfYqrATbirIOYONLPc/TravelBliss_Pro1?t=WSrzkvTinLHNLmCY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2"
+      />
         {/* <ProjectsCard
           title="COMMING SOON..."
           des="Exciting Project building will update soon"
