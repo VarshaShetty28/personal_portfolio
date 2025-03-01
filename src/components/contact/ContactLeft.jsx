@@ -16,9 +16,9 @@ const ContactLeft = () => {
                 in Data Structures and Algorithms (DSA) and experience in Flutter,
                  I am eager to connect with innovative professionals to collaborate on cutting-edge projects </p>
 
-            <p className='text-base text-gray-400 flex flex-col sm:flex-row items-start sm:items-center gap-2'>
-                Phone: <span className='text-lightText'>+91 9632955709</span>
-            </p>
+            {/* <p className='text-base text-gray-400 flex flex-col sm:flex-row items-start sm:items-center gap-2'>
+                Phone: <span className='text-lightText'>+91-------</span>
+            </p> */}
             <p className='text-base text-gray-400 flex flex-col sm:flex-row items-start sm:items-center gap-2'>
                 Email:{" "} <span className='text-lightText'>varshashetty289@gmail.com</span>
             </p>
