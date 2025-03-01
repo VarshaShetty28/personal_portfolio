@@ -34,7 +34,7 @@ const Projects = () => {
       />
       <ProjectsCard
         title="PORTFOLIO"
-        des="My Portfolio is a React-based personal website built with Framer Motion, Express.js, and Nodemailer, offering a dynamic and visually engaging experience with smooth animations and an integrated mail service for seamless communication. 🚀💼"
+        des="My Portfolio is a React-based personal website built to showcase my skills, interests, and projects while offering a clean, modern design with well-structured content and easy navigation for a seamless browsing experience. 🚀💼"
         src={p2}
         githubLink="https://github.com/VarshaShetty28/personal_portfolio"
         liveLink="https://personal-portfolio-pi-lac.vercel.app/"
