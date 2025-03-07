@@ -28,7 +28,7 @@ const ContactLeft = () => {
             <div className='flex gap-4'>
                    
                      <a 
-                         href="https://www.linkedin.com/in/yourusername" 
+                         href="https://www.linkedin.com/in/varshashetty28/" 
                          target="_blank" 
                          rel="noopener noreferrer" 
                          className="banner-icon"
@@ -46,7 +46,7 @@ const ContactLeft = () => {
  
                      
                      <a 
-                         href="https://www.instagram.com/yourusername" 
+                         href="https://www.instagram.com/_varsha___shetty/#" 
                          target="_blank" 
                          rel="noopener noreferrer" 
                          className="banner-icon"
