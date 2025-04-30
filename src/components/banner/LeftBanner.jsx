@@ -57,7 +57,7 @@ const LeftBanner = () => {
                             <FaTwitter />
                         </a>
                         <a 
-                            href="/" 
+                            href="#" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="banner-icon"
