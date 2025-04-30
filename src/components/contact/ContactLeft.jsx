@@ -46,7 +46,7 @@ const ContactLeft = () => {
  
                      
                      <a 
-                         href="https://www.instagram.com/_varsha___shetty/#" 
+                         href="/" 
                          target="_blank" 
                          rel="noopener noreferrer" 
                          className="banner-icon"
