@@ -6,7 +6,7 @@ import { MdClose } from "react-icons/md";
 import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import logo from '../../assets/images/logoI.png';
 import { navLinksdata } from '../../constants';
-import resumeFile from '../../assets/MITE_CSE_VARSHA.pdf';
+import resumeFile from '../../assets/varsha_resume_2025.pdf';
 import { motion } from "framer-motion";
 
 const Navbar = () => {
