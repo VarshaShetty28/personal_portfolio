@@ -1,62 +1,95 @@
+// ContactInfo.js - Cleaner Left Section
 import React from 'react'
-import contactImg from "../../assets/images/contactImg.png";
-import { FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
+import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa'
+import { HiMail, HiLocationMarker } from 'react-icons/hi'
 
-const ContactLeft = () => {
+const ContactInfo = () => {
+  const contactDetails = [
+    {
+      icon: <HiMail className="text-emerald-400" />,
+      label: "Email",
+      value: "varshashetty289@gmail.com",
+      link: "mailto:varshashetty289@gmail.com"
+    },
+    {
+      icon: <HiLocationMarker className="text-emerald-400" />,
+      label: "Location",
+      value: "Udupi, Karnataka, India"
+    }
+  ];
+
+  const socialLinks = [
+    {
+      icon: <FaLinkedinIn />,
+      url: "https://www.linkedin.com/in/varshashetty28/",
+      label: "LinkedIn"
+    },
+    {
+      icon: <FaGithub />,
+      url: "https://github.com/VarshaShetty28",
+      label: "GitHub"
+    },
+    {
+      icon: <FaTwitter />,
+      url: "https://x.com/Varsha1478",
+      label: "Twitter"
+    }
+  ];
+
   return (
-    <div className='w-full lg:w-[35%] h-full bg-gradient-to-r from-[#1e2024] to-[#23273b] p-8
-    rounded-lg shadow-shadowOne flex flex-col gap-8 justify-center'>
-        <img
-        className='w-full h-64 object-cover rounded-lg mb-2'
-        src={contactImg} alt="conatactimg" />
-        <div className='flex flex-col gap-4 mb-2'>
-            <h3 className='text-3xl font-bold text-white'>Varsha Shetty</h3>
-            <p className='text-lg font-normal text-gray-400'>MERN Stack Developer </p>
-            <p className='text-base text-gray-400 tracking-wide'>As a MERN stack developer with a strong foundation 
-                in Data Structures and Algorithms (DSA) and experience in Flutter,
-                 I am eager to connect with innovative professionals to collaborate on cutting-edge projects </p>
+    <div className='space-y-8'>
+      {/* Quick Info */}
+      <div>
+        <h3 className='text-2xl font-semibold text-white mb-2'>
+          Let's work together
+        </h3>
+        <p className='text-gray-400 text-sm leading-relaxed'>
+          I'm always interested in hearing about new projects and opportunities.
+        </p>
+      </div>
 
-            {/* <p className='text-base text-gray-400 flex flex-col sm:flex-row items-start sm:items-center gap-2'>
-                Phone: <span className='text-lightText'>+91-------</span>
-            </p> */}
-            <p className='text-base text-gray-400 flex flex-col sm:flex-row items-start sm:items-center gap-2'>
-                Email:{" "} <span className='text-lightText'>varshashetty289@gmail.com</span>
-            </p>
-        </div>
-        <div className='flex flex-col gap-4'>
-            <h2 className='text-base uppercase font-titleFont mb-4'>Find me in</h2>
-            <div className='flex gap-4'>
-                   
-                     <a 
-                         href="https://www.linkedin.com/in/varshashetty28/" 
-                         target="_blank" 
-                         rel="noopener noreferrer" 
-                         className="banner-icon"
-                         >
-                         <FaLinkedinIn />
-                     </a> 
-                     <a 
-                         href="https://x.com/Varsha1478?t=u5Lcsis8vXR_IEqc3dcaiQ&s=09" 
-                         target="_blank" 
-                         rel="noopener noreferrer" 
-                         className="banner-icon"
-                         >
-                         <FaTwitter />
-                     </a>
- 
-                     
-                     <a 
-                         href="/" 
-                         target="_blank" 
-                         rel="noopener noreferrer" 
-                         className="banner-icon"
-                         >
-                         <FaInstagram />
-                     </a>         
+      {/* Contact Details */}
+      <div className='space-y-4'>
+        {contactDetails.map((item, index) => (
+          <div key={index} className='flex items-start gap-4'>
+            <div className='text-xl mt-1'>{item.icon}</div>
+            <div>
+              <p className='text-sm text-gray-500'>{item.label}</p>
+              {item.link ? (
+                <a 
+                  href={item.link}
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  {item.value}
+                </a>
+              ) : (
+                <p className='text-gray-300'>{item.value}</p>
+              )}
             </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Social Links */}
+      <div>
+        <p className='text-sm text-gray-500 mb-3'>Connect with me</p>
+        <div className='flex gap-3'>
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className='w-10 h-10 rounded-lg bg-gray-800/50 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-600 transition-all duration-300'
+              aria-label={social.label}
+            >
+              {social.icon}
+            </a>
+          ))}
         </div>
+      </div>
     </div>
   )
 }
 
-export default ContactLeft
+export default ContactInfo

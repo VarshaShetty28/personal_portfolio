@@ -1,81 +1,93 @@
+// Projects.jsx
 import React from "react";
 import Title from "../layouts/Title";
 import ProjectsCard from "./ProjectsCard";
-import projectOne from "../../assets/images/projectOne.jpg";
 import healthGrid from "../../assets/images/lap_home.png";
 import nugget from "../../assets/images/nugget.png";
-import CS3 from "../../assets/images/CS3.jpeg";
-import { motion } from "framer-motion";
 import p1 from "../../assets/images/p1.png";
 import p2 from "../../assets/images/p2.png";
 import p3 from "../../assets/images/p3.png";
+import { motion } from "framer-motion";
 
 const Projects = () => {
+  const projects = [
+    {
+      title: "Health Grid",
+      category: "Full Stack Application",
+      description: "MERN-based healthcare platform enabling seamless appointment booking, payment, and schedule management for patients, doctors, and admins.",
+      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      image: healthGrid,
+      github: "https://github.com/VarshaShetty28/health_grid.git",
+      live: "https://health-grid-frontend.onrender.com"
+    },
+    {
+      title: "Nuggets",
+      category: "AI-Powered Platform",
+      description: "Smart news aggregator using AI to deliver personalized, bite-sized summaries across multiple domains including Technology, Business, and Sports.",
+      tech: ["React", "AI/ML", "News API", "Tailwind CSS"],
+      image: nugget,
+      github: "https://github.com/VarshaShetty28/nuggets.git",
+      live: "https://nuggets-375.pages.dev/"
+    },
+    {
+      title: "TuneTrek",
+      category: "E-commerce Platform",
+      description: "Interactive headphone marketplace with advanced filtering, comparison features, and smooth animations using Framer Motion.",
+      tech: ["React", "Framer Motion", "Tailwind CSS"],
+      image: p1,
+      github: "https://github.com/VarshaShetty28/tunetrek",
+      live: "https://tunetrek-theta.vercel.app/"
+    },
+    {
+      title: "Portfolio Website",
+      category: "Personal Project",
+      description: "Modern portfolio showcasing skills and projects with clean design, smooth animations, and responsive layout.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      image: p2,
+      github: "https://github.com/VarshaShetty28/personal_portfolio",
+      live: "https://personal-portfolio-pi-lac.vercel.app/"
+    },
+    {
+      title: "TravelBliss",
+      category: "UI/UX Design",
+      description: "Figma-designed travel platform focusing on user experience with elegant UI and stress-free booking flow.",
+      tech: ["Figma", "Prototyping", "UI Design"],
+      image: p3,
+      github: "https://www.figma.com/design/bK3DXfYqrATbirIOYONLPc/TravelBliss_Pro1",
+      live: "https://www.figma.com/proto/bK3DXfYqrATbirIOYONLPc/TravelBliss_Pro1"
+    }
+  ];
+
   return (
-    <motion.section
+    <section
       id="projects"
-      initial={{ opacity: 0 }} // Start invisible
-      whileInView={{ opacity: 1 }} // Fade in when in view
-      transition={{ duration: 0.6 }} // Smooth transition
-      viewport={{ once: true }} // Runs only once
-      className="w-full pt-8 xs:pt-10 md:pt-8 lg:pt-10 pb-12 xs:pb-16 md:pb-16 lg:pb-20 border-b-[1px] border-b-black"
+      className="w-full py-20 border-b border-gray-800"
     >
-      <div className="flex justify-center px-3 xs:px-4 md:px-0 mb-8 xs:mb-10 md:mb-8">
-        <Title
-          title="VISIT MY PORTFOLIO AND FEEL FREE TO SHARE YOUR FEEDBACK"
-          des="My Projects"
-        />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Featured Projects
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            A selection of my recent work showcasing full-stack development, AI integration, and design capabilities
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <ProjectsCard {...project} />
+            </motion.div>
+          ))}
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xs:gap-10 md:gap-8 lg:gap-14 px-3 xs:px-4 md:px-8 lg:px-0">
-        <ProjectsCard
-          title="HEALTH GRID"
-          des="A full-stack MERN application for booking doctor appointments. It enables patients to book and pay for appointments, doctors to manage schedules, and admins to oversee users and appointments — all through a responsive and user-friendly interface."
-          src={healthGrid}
-          githubLink="https://github.com/VarshaShetty28/health_grid.git"
-          liveLink="https://health-grid-frontend.onrender.com"
-        />
-        <ProjectsCard
-          title="NUGGETS"
-          des="Nugget is a smart news platform that delivers bite-sized, AI-generated summaries of the day’s top stories, tailored to user interests. Instead of information overload, it provides concise and personalized updates from multiple domains like Technology, Business, Sports, Politics, and more."
-          src={nugget}
-          githubLink="https://github.com/VarshaShetty28/nuggets.git"
-          liveLink="https://nuggets-375.pages.dev/"
-        />
-       
-        <ProjectsCard
-          title="TUNETREK"
-          des="TuneTrek is a React-based web application built with Framer Motion, MouseFollower, and Tailwind CSS, providing a seamless and interactive experience for exploring, filtering, and comparing headphones based on brand, features, and budget. 🚀🎧"
-          src={p1}
-          githubLink="https://github.com/VarshaShetty28/tunetrek"
-          liveLink="https://tunetrek-theta.vercel.app/"
-        />
-        <ProjectsCard
-          title="PORTFOLIO"
-          des="My Portfolio is a React-based personal website built to showcase my skills, interests, and projects while offering a clean, modern design with well-structured content and easy navigation for a seamless browsing experience. 🚀💼"
-          src={p2}
-          githubLink="https://github.com/VarshaShetty28/personal_portfolio"
-          liveLink="https://personal-portfolio-pi-lac.vercel.app/"
-        />
-        <ProjectsCard
-          title="TravelBliss"
-          des="TravelBliss is a Figma-designed travel website that evokes peace and relaxation. It features an elegant UI, smooth navigation, and a stress-free booking experience. From exploring destinations to planning getaways, every detail is designed for ease. ✨🌍"
-          src={p3}
-          githubLink="https://www.figma.com/design/bK3DXfYqrATbirIOYONLPc/TravelBliss_Pro1?t=itJQnIITOlFQr7ge-1"
-          liveLink="https://www.figma.com/proto/bK3DXfYqrATbirIOYONLPc/TravelBliss_Pro1?t=WSrzkvTinLHNLmCY-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-2&starting-point-node-id=1%3A2"
-        />
-        
-        {/* <ProjectsCard
-          title="COMMING SOON..."
-          des="comming soon "
-          src={CS2}
-        />
-        <ProjectsCard
-          title="COMMING SOON..."
-          des="comming soon "
-          src={CS3}
-        /> */}
-      </div>
-    </motion.section>
+    </section>
   );
 };
 
