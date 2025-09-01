@@ -1,28 +1,29 @@
-// Contact.js
+// Contact.js - Professional Redesign
 import React from 'react'
-import Title from '../layouts/Title'
-import ContactLeft from './ContactLeft'
-import ContactRight from './ContactRight'
+import ContactInfo from './ContactLeft.jsx'
+import ContactForm from './ContactRight.jsx'
 
 const Contact = () => {
   return (
-    <section id='contacts' className='w-full pt-10 pb-20 border-b-[1px] border-b-black'>
-    <div className='flex justify-center items-center'>
-        <Title 
-          title=""
-          des="Contact With Me!"
-          />
-   </div>
-   <div className='w-full px-4 lg:px-0'>
-        <div className='w-full h-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-0'>
-            <ContactLeft/>
-            <div className='w-full lg:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23273b] p-8
-                rounded-lg shadow-shadowOne'>
-                <ContactRight/>
-            </div>
+    <section id='contacts' className='w-full py-20 border-b border-gray-800'>
+      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='text-center mb-12'>
+          <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
+            Get In Touch
+          </h2>
+          <p className='text-gray-400 max-w-2xl mx-auto'>
+            Have a project in mind or want to collaborate? I'd love to hear from you.
+          </p>
         </div>
-   </div>
-   </section>
+
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+          <ContactInfo />
+          <div className='lg:col-span-2'>
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

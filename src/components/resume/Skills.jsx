@@ -1,59 +1,94 @@
+// Skills.jsx - Professional Redesign
 import React from 'react';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 } }}
-      className="px-4 lg:px-0"
-    >
-      <div className='py-6 lg:py-12 font-titleFont gap-4 mt-3 lg:mt-5'>
-        <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-center'>
-          Professional Skills
-        </h2>
-      </div>
-      <div className='flex flex-col lg:flex-row w-full gap-8 lg:gap-20'>
-        <div className='w-full lg:w-1/2'>
-          <div className='mt-6 lg:mt-10 w-full flex flex-col gap-6'>
-            <SkillBar skill="React" percentage="85" />
-            <SkillBar skill="Tailwind CSS" percentage="90" />
-            <SkillBar skill="Express" percentage="70" />
-            <SkillBar skill="MongoDb" percentage="70" />
-            <SkillBar skill="MySql" percentage="75" />
-          </div>
-        </div>
+    const skillCategories = [
+        {
+            title: "Frontend Development",
+            skills: [
+                { name: "React.js", level: 90 },
+                { name: "JavaScript", level: 85 },
+                { name: "Tailwind CSS", level: 90 },
+                { name: "HTML/CSS", level: 95 },
+                { name: "Next.js", level: 75 }
+            ]
+        },
+        {
+            title: "Backend Development",
+            skills: [
+                { name: "Node.js", level: 80 },
+                { name: "Express.js", level: 75 },
+                { name: "Python", level: 70 },
+                { name: "MongoDB", level: 75 },
+                { name: "MySQL", level: 70 }
+            ]
+        },
+        {
+            title: "Tools & Others",
+            skills: [
+                { name: "Git/GitHub", level: 85 },
+                { name: "Vercel/Render", level: 90 },
+                { name: "Figma", level: 80 },
+                { name: "VS Code", level: 90 },
+                { name: "Postman", level: 85 }
+            ]
+        }
+    ];
 
-        <div className='w-full lg:w-1/2'>
-          <div className='mt-6 lg:mt-10 w-full flex flex-col gap-6'>
-            <SkillBar skill="Javascript" percentage="75" />
-            <SkillBar skill="C" percentage="70" />
-            <SkillBar skill="HTML" percentage="90" />
-            <SkillBar skill="Python" percentage="70" />
-            <SkillBar skill="Dart" percentage="50" />
-          </div>
-        </div>
-      </div>
-    </motion.div>
-  );
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {skillCategories.map((category, categoryIndex) => (
+                    <motion.div
+                        key={categoryIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
+                        className='bg-gray-900/30 rounded-lg p-6'
+                    >
+                        <h3 className='text-lg font-semibold text-white mb-6'>
+                            {category.title}
+                        </h3>
+                        <div className='space-y-4'>
+                            {category.skills.map((skill, index) => (
+                                <div key={index}>
+                                    <div className='flex justify-between items-center mb-2'>
+                                        <span className='text-sm text-gray-300'>{skill.name}</span>
+                                        <span className='text-sm text-gray-500'>{skill.level}%</span>
+                                    </div>
+                                    <div className='h-2 bg-gray-800 rounded-full overflow-hidden'>
+                                        <motion.div
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: `${skill.level}%` }}
+                                            transition={{ duration: 1, delay: index * 0.1 }}
+                                            className='h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full'
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+
+            {/* Additional Skills */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className='mt-8 text-center'
+            >
+                <p className='text-gray-400 text-sm'>
+                    Also familiar with: <span className='text-gray-300'>C, Dart, Flutter, AI/ML, REST APIs, Agile Methodology</span>
+                </p>
+            </motion.div>
+        </motion.div>
+    );
 };
-
-// New reusable SkillBar component
-const SkillBar = ({ skill, percentage }) => (
-  <div className='overflow-x-hidden'>
-    <p className='text-sm uppercase font-medium'>{skill}</p>
-    <motion.div
-      initial={{ x: "-100%", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
-      className="h-2 bg-opacity-20 bg-gray-300 rounded-md mt-2"
-      style={{ width: `${percentage}%` }}  // ✅ Fixed width issue
-    >
-      <div className='w-full h-full bg-gradient-to-r from-blue-600 via-pink-600 to-red-500 rounded-md relative'>
-        <span className='absolute -top-7 right-0 text-sm'>{percentage}%</span>
-      </div>
-    </motion.div>
-  </div>
-);
 
 export default Skills;
