@@ -1,10 +1,10 @@
-// ProjectsCard.jsx - Professional Redesign
+// ProjectsCard.jsx - Professional Redesign (Full Description + Full Tech + Equal Height)
 import React from 'react';
 import { HiExternalLink, HiCode } from 'react-icons/hi';
 
 const ProjectsCard = ({ title, category, description, tech, image, github, live }) => {
   return (
-    <div className="group relative bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300">
+    <div className="group relative bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all duration-300 flex flex-col h-full">
       {/* Image Container */}
       <div className="relative h-48 overflow-hidden bg-gray-800">
         <img 
@@ -17,7 +17,7 @@ const ProjectsCard = ({ title, category, description, tech, image, github, live 
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-grow">
         {/* Category Badge */}
         <span className="text-xs font-medium text-emerald-400 uppercase tracking-wider">
           {category}
@@ -28,12 +28,12 @@ const ProjectsCard = ({ title, category, description, tech, image, github, live 
           {title}
         </h3>
 
-        {/* Description */}
+        {/* Description (full, not clamped) */}
         <p className="text-gray-400 text-sm leading-relaxed mb-4">
           {description}
         </p>
 
-        {/* Tech Stack */}
+        {/* Tech Stack (full list) */}
         <div className="flex flex-wrap gap-2 mb-4">
           {tech.map((item, i) => (
             <span 
@@ -45,8 +45,8 @@ const ProjectsCard = ({ title, category, description, tech, image, github, live 
           ))}
         </div>
 
-        {/* Links */}
-        <div className="flex items-center gap-4 pt-4 border-t border-gray-800">
+        {/* Links (stick to bottom) */}
+        <div className="flex items-center gap-4 pt-4 border-t border-gray-800 mt-auto">
           <a 
             href={github}
             target="_blank"
