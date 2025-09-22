@@ -7,6 +7,7 @@ import nugget from "../../assets/images/nugget.png";
 import p1 from "../../assets/images/p1.png";
 import p2 from "../../assets/images/p2.png";
 import p3 from "../../assets/images/p3.png";
+import p4 from "../../assets/images/p4.png";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -14,17 +15,34 @@ const Projects = () => {
     {
       title: "Health Grid",
       category: "Full Stack Application",
-      description: "MERN-based healthcare platform enabling seamless appointment booking, payment, and schedule management for patients, doctors, and admins.",
+      description: "A full-stack MERN application for booking doctor appointments. It enables patients to book and pay for appointments, doctors to manage schedules, and admins to oversee users and appointments — all through a responsive and user-friendly interface.",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
       image: healthGrid,
       github: "https://github.com/VarshaShetty28/health_grid.git",
       live: "https://health-grid-frontend.onrender.com"
     },
     {
+  title: "Monica AI",
+  category: "AI-Powered Conversational Assistant",
+  description: "A voice-enabled conversational AI assistant that supports both text and voice interactions, delivering real-time responses with a smooth and user-friendly interface.",
+  tech: [
+    "Python","JavaScript",
+    "Web Speech API",
+    "OpenAI & Groq Models",
+    "FastAPI & LangChain",
+    
+  ],
+  image: p4, // replace with your Monica AI image import
+  github: "https://github.com/your-username/monica-ai", // replace with actual repo link
+  live: "https://your-live-demo-link.com" // replace with actual live link
+},
+
+
+    {
       title: "Nuggets",
       category: "AI-Powered Platform",
       description: "Smart news aggregator using AI to deliver personalized, bite-sized summaries across multiple domains including Technology, Business, and Sports.",
-      tech: ["React", "AI/ML", "News API", "Tailwind CSS"],
+      tech: [  "React",  "Python",  "newspaper3k",  "FastAPI",  "TailwindCSS",  "Pydantic"],
       image: nugget,
       github: "https://github.com/VarshaShetty28/nuggets.git",
       live: "https://nuggets-375.pages.dev/"
