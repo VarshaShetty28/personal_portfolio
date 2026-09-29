@@ -7,7 +7,7 @@ const Education = () => {
         {
             degree: "B.E. Computer Science & Engineering",
             institution: "Mangalore Institute of Technology and Engineering",
-            period: "2022 - Present",
+            period: "2022 - 2026",
             grade: "9.38 CGPA",
             description: "Specializing in full-stack development, AI/ML, and software engineering principles."
         },
